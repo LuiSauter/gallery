@@ -1,0 +1,25 @@
+.sidebar {
+    position: fixed;
+    background-color: $dark-color;
+    width: 100%;
+    height: 100vh;
+    top: 50px;
+    transform: translateY(-100%) ;
+    z-index: 1;
+    transition: transform .3s;
+    
+    @include laptop {
+    background-color: $dark-color-2;
+        // display: none;
+        // display: grid;
+        grid-column: 1 / span 1;
+        grid-row: 1 / span 2;
+        width: 15%;
+        top: 0;
+        transform: translateY(0) ;
+    }
+    
+    &.show {
+        transform: translateY(0) ;
+    }
+}

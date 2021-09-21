@@ -1,0 +1,12 @@
+.logo-aside {
+    display: none;
+    margin: 0;
+    @include laptop {
+        display: flex;
+        width: 50%;
+        // max-width: 200px;
+        justify-content: center;
+        align-items: center;
+        margin: 15px auto;
+    }
+}

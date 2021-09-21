@@ -1,0 +1,45 @@
+.form {
+    background-color: $dark-color-2;
+    padding: 1.4rem;
+    border-radius: 15px;
+    width: 100%;
+    max-width: 360px;
+
+    &__field {
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+    }
+    &__label, &__input {
+        width: 100%;
+        margin-bottom: 1rem;
+        background: none;
+        border: none;
+        outline: none;
+        color: $text-color;
+    }
+
+    &__input {
+        margin-bottom: 2rem;
+        border-bottom: 2px solid $text-color;
+        &:focus {
+            border-bottom: 2px solid $primary-color;
+        }
+    } 
+
+    &__submit {
+        display: inline-block;
+        padding: .5rem 1rem;
+        color: $text-color;
+        background-color: $primary-color;
+        border: none;
+        cursor: pointer;
+        border-radius:.25rem;
+        transition: transform .2s;
+
+        &:active,
+        &focus {
+            transform: scale(0.9);
+        }
+    }
+}

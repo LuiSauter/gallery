@@ -1,0 +1,51 @@
+.topbar {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    height: 50px;
+    background-color: $dark-color-2;
+    z-index: 100;
+    // padding-left: 70px;
+    //.topbar__icon
+    &__icon {
+        width:90px;
+        display: flex;
+        justify-content: space-around;
+        margin: auto;
+
+        &:hover {
+            color: $primary-color;
+        }
+    }
+    &__icon span {
+        margin-left: 10px;
+    }
+
+    @include tablet {
+        // height: 60px;
+    }
+
+    @include laptop {
+        display: none;
+        display: flex;
+        height: 40px;
+        left: 100%;
+        width: 35vw;
+        justify-content: space-between;
+        transform: translate(-100%);
+        background-color: transparent;
+        &__icon {
+            justify-content: flex-end;
+        }
+    }
+
+    @include desktop {
+        width: 35vw;
+    }
+}

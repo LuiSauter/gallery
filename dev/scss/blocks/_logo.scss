@@ -1,0 +1,17 @@
+.logo {
+    margin: auto;
+    width: 75%;
+    max-width: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: .3rem;
+    left: .1rem;
+    // z-index: 10;
+    
+    @include laptop {
+        display: none;
+    }
+    @include desktop {
+    }
+}

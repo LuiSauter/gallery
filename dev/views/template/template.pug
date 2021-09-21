@@ -1,0 +1,38 @@
+include ../config/config
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="css/styles.css")
+        script(crossorigin="anonymous" src="https://kit.fontawesome.com/b2e0f3bd43.js")
+        title Gallery
+    body
+        header#header.header
+            #topbar.topbar
+                .logo
+                    a(href="/").logo
+                        img(src="./assets/img/logo.png", alt="web logo")
+                .topbar__icon(data-type="login")
+                    i.fas.fa-user
+                    span Log in
+                .topbar__icon(data-type="register")
+                    i.fas.fa-user-plus
+                    span Register
+                .toggle-menu
+                    #toggle-menu.toggle-menu__icon
+                        .first-bar
+                        .second-bar
+                        .third-bar
+        #sidebar.sidebar
+            #logo-aside
+                a(href="/").logo-aside
+                    img(src="./assets/img/logo.png", alt="web logo")
+                block menu
+        main.main
+            block title
+            block main
+        include ../includes/login-modal
+        include ../includes/register-modal
+        script(src="js/scripts-min.js") 
